@@ -44,8 +44,30 @@
 // let ans = noOfVowels(str);
 // console.log(ans);
 
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-arr.forEach((val) => {
-    console.log(val * val);
+// arr.forEach((val) => {
+//     console.log(val * val);
+// })
+
+//reduce method
+
+let n = prompt("Enter the no. of elements");
+let arr = [];
+for(let i=0; i<n; ++i) {
+    let x = prompt(`Enter index ${i + 1} -`);
+    arr[i] = parseInt(x);
+}
+
+console.log(arr);
+
+const sum = arr.reduce((res, curr) => {
+    return res + curr;
 })
+
+const prod = arr.reduce((res, curr) => {
+    return res * curr;
+})
+
+console.log("Sum of arr =", sum);
+console.log("Prod of arr =", prod);
